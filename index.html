@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+
+    <style>
+        body {
+            background-color: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: black;
+            width: 30%;
+            height: 400px;
+            border: 5px solid white;
+            outline: 5px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto;
+            box-sizing: border-box;
+        }
+
+        .fila {
+            display: flex;
+            gap: 30px;
+        }
+
+        .campo {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        input, textarea {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px dashed gray;
+            color: white;
+            padding: 8px 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-bottom: 3px solid yellow;
+        }
+
+        .comentarios {
+            width: 100%;
+        }
+
+        textarea {
+            height: 100px;
+            border: 2px dashed gray;
+            resize: none;
+        }
+
+        textarea:focus {
+            border: 3px solid yellow;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            background-color: #1beae990;
+            color: white;
+            font-size: 15px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            padding: 10px 25px;
+        }
+
+        button:hover {
+            background-color: #1aea90;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div class="fila">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido">
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo">
+            </div>
+        </div>
+
+        <div class="campo comentarios">
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
